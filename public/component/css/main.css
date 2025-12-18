@@ -1,0 +1,748 @@
+/* =============================
+   FIX TOGGLER NAVBAR (Bootstrap 4.6)
+   ============================= */
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* =============================
+   NAVBAR BASE
+   ============================= */
+.navbar-custom {
+    background: #8B0000; /* Maroon utama */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: background 0.3s ease;
+}
+
+/* =============================
+   NAV LINK DEFAULT
+   ============================= */
+.custom-nav {
+    color: #ffffff !important; /* Putih */
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+/* =============================
+   HOVER EFFECT
+   ============================= */
+.custom-nav:hover {
+    color: #FF4500 !important; /* Orange-red accent */
+}
+
+/* Underline animation (Colorlib style) */
+.custom-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* lebih presisi */
+    width: 0%;
+    height: 2px;
+    background-color: #FF4500;
+    transition: width 0.3s ease;
+}
+
+.custom-nav:hover::after {
+    width: 100%;
+}
+
+/* =============================
+   ACTIVE LINK (CURRENT PAGE)
+   ============================= */
+.active-link {
+    color: #FF4500 !important;
+    font-weight: 600;
+}
+
+.active-link::after {
+    width: 100%;
+    background-color: #FF4500;
+}
+
+/* LOGO NAVBAR — Ukuran Standar */
+.navbar.navbar-custom .navbar-brand > img.logo-navbar {
+    max-height: 48px !important; /* ukuran ideal navbar */
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* =======================================
+   SEARCH BAR NAVBAR - QIQI Frozen Theme
+   ======================================= */
+
+.search-group {
+    border-radius: 50px;
+    overflow: hidden; /* agar radius mulus */
+    border: 2px solid #FF4500;
+    background: #ffffff;
+    transition: 0.25s ease;
+}
+
+.search-group:focus-within {
+    border-color: #FF4500; /* warna accent saat fokus */
+    box-shadow: 0 0 6px rgba(255, 69, 0, 0.4);
+}
+
+.search-input {
+    border: none !important;
+    border-radius: 50px 0 0 50px !important;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+
+.search-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.search-btn {
+    background: #8B0000 !important; /* maroon */
+    border: none !important;
+    color: #ffffff !important;
+    padding: 8px 16px;
+    border-radius: 0 50px 50px 0 !important;
+    transition: 0.25s ease-in-out;
+}
+
+.search-btn:hover {
+    background: #FF4500 !important; /* hover ke accent */
+    color: #ffffff !important;
+}
+
+.search-btn i {
+    font-size: 16px;
+}
+
+
+/* =============================
+   NAVBAR ICONS (CUSTOMER)
+   ============================= */
+.navbar-custom .nav-link .icon {
+    font-size: 20px;
+    color: #ffffff !important;
+    transition: 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover .icon {
+    color: #FF4500 !important;
+}
+
+/* =============================
+   ACTIVE NAVBAR ICON (CURRENT PAGE)
+   ============================= */
+.navbar-custom .nav-link.active-icon .icon {
+    color: #FF4500 !important;
+    font-weight: 700;
+    transform: scale(1.15);
+    transition: 0.3s ease;
+}
+
+/* Underline kecil (opsional, biar match dengan nav-text active) */
+.navbar-custom .nav-link.active-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 2px;
+    background-color: #FF4500;
+    border-radius: 10px;
+}
+
+/* Hover tetap bekerja */
+.navbar-custom .nav-link.active-icon:hover .icon {
+    color: #FF4500 !important;
+}
+
+
+/* =============================
+   USER DROPDOWN (AVATAR)
+   ============================= */
+.navbar-custom .dropdown-toggle {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.navbar-custom .dropdown-toggle:hover {
+    color: #FF4500 !important;
+}
+
+.navbar-custom .dropdown-menu {
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+    padding: 10px 0;
+}
+
+.navbar-custom .dropdown-item {
+    padding: 10px 18px;
+    font-weight: 500;
+    color: #333333 !important;
+    transition: background 0.25s ease;
+}
+
+.navbar-custom .dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Hover item */
+.navbar-custom .dropdown-item:hover {
+    background: rgba(139, 0, 0, 0.10) !important;
+    color: #8B0000 !important;
+}
+
+/* =============================
+   AVATAR SIZE
+   ============================= */
+.navbar-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.navbar-avatar:hover {
+    border-color: #FF4500;
+}
+
+/* =============================
+   CART BADGE
+   ============================= */
+.cart-badge {
+    background: #FF4500;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 12px;
+    position: absolute;
+    top: -6px;
+    right: -10px;
+}
+
+/* ============================================
+   CUSTOM BUTTON THEME - QIQI Frozen
+   ============================================ */
+
+/* BUTTON OUTLINE PRIMARY (Maroon) */
+.btn-outline-primary {
+    color: #8B0000 !important;
+    border-color: #8B0000 !important;
+    font-weight: 500;
+    transition: 0.25s ease-in-out;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: #8B0000 !important;
+    color: #ffffff !important;
+    border-color: #8B0000 !important;
+}
+
+/* BUTTON PRIMARY (SOLID) */
+.btn-primary {
+    background-color: #8B0000 !important;
+    border-color: #8B0000 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #FF4500 !important; /* Accent */
+    border-color: #FF4500 !important;
+}
+
+/* BUTTON SECONDARY (GRAY) */
+.btn-secondary {
+    background-color: #696969 !important;
+    border-color: #696969 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #8B0000 !important; /* Hover ke maroon */
+    border-color: #8B0000 !important;
+}
+/* =======================================
+   BUTTON DANGER (BROWN STYLE)
+   ======================================= */
+
+   /* BUTTON OUTLINE DANGER (Brown) */
+.btn-outline-danger {
+    border-color: #A0522D !important;   /* brown border */
+    color: #A0522D !important;               /* brown text */
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hover → Solid Brown */
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    background-color: #A0522D !important;         /* solid brown */
+    border-color: #8B4513 !important;        /* darker brown */
+    color: #ffffff !important;               /* white text */
+}
+
+/* BUTTON DANGER (SOLID) */
+.btn-danger {
+    background-color: #A0522D !important; /* coklat elegan */
+    border-color: 1px solid #8B4513 !important;
+    color: #ffffff !important;
+}
+
+.btn-danger:hover {
+    background-color: #8B4513 !important; /* lebih gelap */
+    border-color: #703810 !important;
+    color: white !important;
+}
+
+
+/* ==================================================
+   BUTTON ICON STYLE (Font Awesome + QIQI Theme)
+   ================================================== */
+
+/* Base button-icon class (agar icon tidak mengecil) */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* jarak icon + text */
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 50px;
+    transition: 0.25s ease-in-out;
+}
+
+/* Icon size stabil */
+.btn-icon i {
+    font-size: 18px;
+}
+
+/* ------------------------------------------
+   OUTLINE PRIMARY ICON BUTTON (Maroon)
+   ------------------------------------------ */
+.btn-icon-outline-primary {
+    color: #8B0000 !important;
+    border: 2px solid #8B0000 !important;
+    background: transparent !important;
+}
+
+.btn-icon-outline-primary:hover,
+.btn-icon-outline-primary:focus {
+    background: #8B0000 !important;
+    color: white !important;
+}
+
+.btn-icon-outline-primary:hover i {
+    color: #ffffff !important;
+}
+
+/* ------------------------------------------
+   SOLID PRIMARY ICON BUTTON (Maroon Solid)
+   ------------------------------------------ */
+.btn-icon-primary {
+    background-color: #8B0000 !important;
+    color: #ffffff !important;
+    border: 2px solid #8B0000 !important;
+}
+
+.btn-icon-primary i {
+    color: #ffffff !important;
+}
+
+.btn-icon-primary:hover,
+.btn-icon-primary:focus {
+    background-color: #FF4500 !important;
+    border-color: #FF4500 !important;
+}
+
+.btn-icon-primary:hover i {
+    color: #ffffff !important;
+}
+
+/* ------------------------------------------
+   SECONDARY GRAY ICON BUTTON
+   ------------------------------------------ */
+.btn-icon-secondary {
+    background-color: #696969 !important;
+    border: 2px solid #696969 !important;
+    color: #ffffff !important;
+}
+
+.btn-icon-secondary i {
+    color: #ffffff !important;
+}
+
+.btn-icon-secondary:hover,
+.btn-icon-secondary:focus {
+    background-color: #8B0000 !important;
+    border-color: #8B0000 !important;
+}
+
+.btn-icon-secondary:hover i {
+    color: #ffffff !important;
+}
+
+/* ============================
+   CATEGORY CARD THEME - RED MAROON
+   ============================ */
+
+/* CARD */
+.category-card {
+    transition: all 0.3s ease;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #D3D3D3; /* light gray border */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #8B0000; /* highlight maroon */
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.10);
+}
+
+/* ICON */
+.category-card .icon-large {
+    font-size: 100px !important;
+    color: #8B0000 !important;
+}
+
+/* JUDUL */
+.category-card h5 {
+    font-weight: 600;
+    color: #696969; /* secondary gray */
+}
+
+/* BUTTON */
+.category-btn {
+    border-color: #8B0000 !important;
+    color: #8B0000 !important;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+.category-btn:hover {
+    background-color: #FF4500 !important; /* hover accent */
+    border-color: #FF4500 !important;
+    color: white !important;
+}
+
+/* TEXT MUTED */
+#categories p {
+    color: #696969 !important; /* secondary gray */
+}
+
+/* Heading */
+#categories h2 {
+    color: #8B0000; /* primary */
+    font-weight: bold;
+}
+
+/* ============================================
+   PRODUCT CARD — QIQI FROZEN (Colorlib Style)
+   ============================================ */
+
+.product-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-color: #8B0000; /* Maroon */
+}
+
+/* IMAGE */
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+/* BODY */
+.product-body {
+    padding: 15px;
+}
+
+/* TITLE */
+.product-title {
+    font-weight: 600;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* PRICE */
+.product-price {
+    margin-top: 5px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.new-price {
+    color: #8B0000; /* Maroon */
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* ACTION ICONS */
+.product-actions .action-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #8B0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.25s ease-in-out;
+    text-decoration: none;
+}
+
+.product-actions .action-icon:hover {
+    background: #FF4500; /* Accent */
+    color: #fff;
+}
+
+.product-actions .action-icon i {
+    font-size: 18px;
+}
+
+/* ======================
+   BADGE DISKON (GLOBAL)
+   ====================== */
+
+.discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #8B0000;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+/* CART TABLE STYLE - QIQI Frozen Theme */
+
+.cart-table-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.cart-table {
+    background: #ffffff;
+}
+
+.cart-table thead {
+    background: #8B0000;
+    color: #ffffff;
+}
+
+.cart-table thead th {
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cart-table tbody tr {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.cart-table tbody td {
+    padding: 18px 14px;
+}
+
+/* IMAGE */
+.cart-img {
+    width: 74px;
+    height: 74px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #8B0000;
+}
+
+/* PRICE */
+.price,
+.subtotal {
+    font-weight: 600;
+    color: #8B0000;
+}
+
+/* QTY INPUT */
+.quantity-input {
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #8B0000;
+    font-weight: 600;
+}
+
+.quantity-input:focus {
+    border-color: #FF4500;
+    box-shadow: 0 0 6px rgba(255, 69, 0, 0.4);
+}
+
+/* PRODUCT NAME */
+.product-name {
+    font-size: 16px;
+    color: #333;
+}
+
+/* GRAND TOTAL */
+.grand-total-text {
+    font-weight: 600;
+    color: #333;
+}
+
+.grand-total {
+    color: #8B0000;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ===============================================
+   PROFILE SIDEBAR – QIQI FROZEN THEME (IMPROVED)
+   =============================================== */
+
+/* Wrapper Sidebar */
+.sidebar-profile {
+    background: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Sidebar Menu Container */
+.sidebar-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Default Item */
+.sidebar-menu .sidebar-item {
+    display: block;
+    padding: 14px 20px;
+    font-weight: 500;
+    color: #5a5c69;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    border-left: 4px solid transparent;
+}
+
+/* Hover Effect */
+.sidebar-menu .sidebar-item:hover {
+    background: #f8f9fc;
+    color: #8B0000; /* maroon */
+    border-left-color: #FF7A00; /* orange */
+}
+
+/* Active Item */
+.sidebar-menu .sidebar-item.active {
+    background: #FDEFEF; /* soft maroon bg */
+    color: #8B0000 !important;
+    font-weight: 600;
+    border-left: 4px solid #FF7A00; /* orange */
+}
+
+/* -----------------------------------------------
+   DANGER ITEM (Delete Account)
+   ----------------------------------------------- */
+.sidebar-menu .sidebar-danger {
+    color: #7b3f00 !important; /* brown */
+}
+
+/* Hover Danger */
+.sidebar-menu .sidebar-danger:hover {
+    background: #fff7f2;
+    color: #7b3f00 !important;
+    border-left-color: #7b3f00;
+}
+
+/* Active Danger */
+.sidebar-menu .active-danger {
+    background: #fff2e6;
+    color: #7b3f00 !important;
+    border-left: 4px solid #7b3f00;
+}
+
+/* ===============================================
+   INVOICE PAGE — QIQI FROZEN FOOD
+   =============================================== */
+
+.invoice-page {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.invoice-header {
+    background-color: #ffffff;
+    border-bottom: 4px solid #8B0000;
+    padding: 20px;
+}
+
+.invoice-header .logo {
+    max-height: 60px;
+}
+
+.invoice-title {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.section-title {
+    border-left: 4px solid #FF7A00;
+    padding-left: 12px;
+    margin: 24px 0 16px;
+    color: #8B0000;
+    font-weight: 600;
+}
+
+.invoice-table thead th {
+    background-color: #f8f9fa;
+    color: #8B0000;
+}
+
+.info-box {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
